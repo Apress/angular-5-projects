@@ -1,6 +1,6 @@
 # Apress Source Code
 
-This repository accompanies [*Angular 5 Projects*](http://www.apress.com/9781484232781) by 978-1-4842-3279-8 (Apress, Mark Clow).
+This repository accompanies [*Angular 5 Projects*](http://www.apress.com/9781484232781) by Mark Clow (Apress, 2018).
 
 [comment]: #cover
 

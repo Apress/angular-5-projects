@@ -1,6 +1,6 @@
 Freeware License, some rights reserved
 
-Copyright (c) Mark Clow 978-1-4842-3279-8
+Copyright (c) 2018 Mark Clow
 
 Permission is hereby granted, free of charge, to anyone obtaining a copy 
 of this software and associated documentation files (the "Software"), 
