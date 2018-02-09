@@ -1,0 +1,68 @@
+<form [formGroup]="_parentForm" novalidate (ngSubmit)="onSubmit(parentForm)">
+  <div formGroupName="name">
+    <b>Name</b>
+    <br/>
+    <label>First Name
+      <input type="text" formControlName="fname">
+      <small *ngIf="_name.controls.fname.touched && !_name.controls.fname.valid">Required.</small>
+    </label>
+    <br/>
+    <label>Last Name
+      <input type="text" formControlName="lname">
+      <small *ngIf="_name.controls.lname.touched && !_name.controls.lname.valid">Required.</small>
+    </label>
+  </div>
+  <br/>
+  <div formGroupName="addr">
+    <b>Address</b>
+    <br/>
+    <label class="left">Address #1
+      <input type="text" formControlName="addr1">
+      <small *ngIf="_addr.controls.addr1.touched && !_addr.controls.addr1.valid">Required.</small>
+    </label>
+    <br/>
+    <label>Address #2
+      <input type="text" formControlName="addr2">
+    </label>
+    <br/>
+    <label>City
+      <input type="text" formControlName="city">
+      <small *ngIf="_addr.controls.city.touched && !_addr.controls.city.valid">Required.</small>
+    </label>
+    <br/>
+    <label>State
+      <select formControlName="state">
+        <option>AL</option>
+        <option>GA</option>
+        <option>FL</option>
+      </select>
+      <small *ngIf="_addr.controls.state.touched && !_addr.controls.state.valid">Required.</small>
+    </label>
+    <br/>
+    <label>Zip
+      <input type="number" formControlName="zip">
+      <small *ngIf="_addr.controls.zip.touched && !_addr.controls.zip.valid">Required.</small>
+    </label>
+  </div>
+  <br/>
+  <div formArrayName="items">
+    <b>Items</b>
+    <br/>
+    <p [formGroupName]="i" *ngFor="let item of _items.controls;let i=index">
+      <label>Name:&nbsp;<input type="text" formControlName="name" size="30">
+        <small *ngIf="item.controls.name.touched && !item.controls.name.valid">Required.</small>
+      </label>
+      <label>Qty:&nbsp;<input type="number" formControlName="qty" min="1" max="10">            
+        <small *ngIf="item.controls.qty.touched && !item.controls.qty.valid">Required.</small>
+      </label>
+      <label>Price:&nbsp;<input type="number" formControlName="price" min="0.01" max="1000" step=".01">
+        <small *ngIf="item.controls.price.touched && !item.controls.price.valid">Required.</small>
+      </label>
+    </p>
+  </div>
+  <br/>
+  <div>
+    <input type="button" value="Add Item" (click)="addItem()"/>
+    <input type="submit" value="Submit" [disabled]="!_parentForm.valid"/>
+  </div>
+</form>

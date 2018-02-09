@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+img {
+    width:200px;
+    border: 1px solid #000000;
+}
+a {
+    background-color: #0066CC;
+    color: #ffffff;
+    border: 1px solid #000000;
+    padding: 10px;
+    margin: 10px;
+}
+.router-link-active {
+    background-color: #C14242;
+}
+div {
+    border: 1px dotted #000000;
+    margin: 10px;
+    padding: 10px;
+}

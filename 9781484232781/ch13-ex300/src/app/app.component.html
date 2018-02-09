@@ -1,0 +1,9 @@
+<select [(ngModel)]="selection">
+  <option *ngFor="let option of options">{{option}}</option>
+</select>
+
+<div [ngSwitch]="selection">
+  <div class="block1" *ngSwitchCase="options[0]">name</div>
+  <div class="block2" *ngSwitchCase="options[1]">address</div>
+  <div class="block3" *ngSwitchDefault>other</div>
+</div>

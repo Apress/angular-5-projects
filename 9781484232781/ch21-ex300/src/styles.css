@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+input.ng-valid {
+  border-left: 5px solid #42A948; /* green */
+}
+
+input.ng-invalid {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.error {
+    color: #ff0000;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+button {
+    border: 1px solid black;
+    margin: 20px;
+}
