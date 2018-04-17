@@ -1,0 +1,15 @@
+div {
+    padding: 10px; border: 1px solid #000000;
+}
+h1,h2 {
+    margin: 0px;
+}
+.active {
+    font-weight: bold; 
+}
+.active::before { 
+    content: ">>> ";
+}
+.active::after { 
+    content: " <<<";
+}

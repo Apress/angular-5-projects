@@ -1,0 +1,11 @@
+<h1>Car</h1>
+<p>
+  make:{{car.get("make")}}
+</p>
+<p>
+  model:{{car.get("model")}}
+</p>
+<p *ngFor="let year of car.get('years')">Year: {{year}}</p>
+<p>
+  description:{{car.get("description")}}
+</p>
